@@ -1,0 +1,16 @@
+<?php
+namespace Schema;
+use Core\Database\Schema;
+
+class (classname)
+{
+    function create()
+    {
+        // type here
+    }
+
+    function drop()
+    {
+        
+    }
+}

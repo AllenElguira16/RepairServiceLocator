@@ -1,0 +1,267 @@
+/**
+ * Main Style
+ *
+ */
+
+html, body{
+    height: 100%;
+}
+
+@import '~material-design-icons/iconfont/material-icons.css';
+// $enable-shadows: true;
+// $open-font-path: "../FDBootstrap/font/OpenSans/" !default;
+$theme-colors: (
+    // "danger": #CC0000,
+    "warning": #FF6D00,
+    // "success": #007E33,
+    // "info": #0099CC,
+    // "primary": #0D47A1,
+    );
+    // $enable-rounded: false;
+@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap-material-design/scss/bootstrap-material-design';
+// $bg-warning: #FF6D00;
+// $body-color: #212121;
+.btn-no-outline{
+    @extend .btn;
+}
+.material-icons {
+    user-select: none;
+}
+
+.card{
+    @extend .shadow;
+}
+
+// input, select, textarea {
+//     font-family: 'Courier new' !important;
+// }
+
+.main-page-overlay{
+    background: url('/images/main-page.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main-page-user{
+    background: url('/images/main-page-user.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+// $bg-warning: $orange;
+// $btn-warning: $orange;
+
+// #main-nav, .btn-warning, .border-warning{
+//     background: $orange !important;
+// }
+
+// .btn-warning{
+//     border-color: $orange !important;
+//     &:hover{
+//         background-color: $orange !important;
+//     }
+// }
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: Code_Bold;
+    src: url('fonts/CODE bold.otf');
+}
+
+body {
+    @extend .bg-light;
+    // font-family: Code_Bold;
+    font-family: 'Fira Code Retina', sans-serif !important;
+}
+
+.main-container {
+    @extend .container,
+    .col-lg-5,
+    .my-5, 
+    ;
+}
+
+.code-bold{
+    font-family: Code_Bold;
+}
+
+.primary-card{
+    @extend .card, .shadow;
+}
+
+.form-control-fluent{
+    @extend .form-control, .rounded-0;
+}
+
+.link {
+    text-decoration: none !important;
+    &:hover {
+        @extend .text-white;
+    }
+}
+
+#home-header {
+    #title {
+        font-family: 'Montserrat';
+    }
+
+    .details {
+        font-family: 'OpenSans';
+    }
+}
+
+.header-title {
+    // @extend .pt-3;
+    font-family: 'OpenSans';
+    font-weight: bold;
+}
+
+textarea:focus, input[type=text]:focus, input[type=password]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=date]:focus, input[type=month]:focus,
+input[type=time]:focus, input[type=week]:focus, input[type=number]:focus, input[type=email]:focus, input[type=url]:focus, input[type=search]:focus, input[type=tel]:focus, 
+input[type=color]:focus, .uneditable-input:focus, .btn:focus {   
+	// border-color: $warning;
+	box-shadow: none;
+	outline: 0 none;
+}
+
+// .navbar-nav{
+//     a{
+//         text-shadow: 0px 0px 2px #000;
+//     }
+// }
+
+.post-body {
+    white-space: pre-line;
+}
+
+.icon-container {
+    border: 2px solid !important;
+}
+
+.fa-10x {
+    font-size: 10em;
+}
+
+.map {
+    height: 100vh;
+    width: 100%;
+}
+
+.hah {
+    color: 1;
+}
+
+.header {
+    height: 100vh;
+    min-height: 650px;
+    @extend .px-0;
+}
+
+.router-link-exact-active {
+    @extend .active;
+    @extend .font-weight-bold;
+}
+
+.home {
+    @extend .form-group;
+    @extend .input-group;
+    @extend .border;
+    @extend .rounded;
+}
+
+.input-icon {
+    width: 15px;
+}
+
+// @mixin placeholder {
+//     ::-webkit-input-placeholder {@content}
+//     :-moz-placeholder           {@content}
+//     ::-moz-placeholder          {@content}
+//     :-ms-input-placeholder      {@content}  
+// }
+
+// @include placeholder {
+//     font-style:italic;
+//     color: white;
+//     font-weight:100;
+// }
+
+// .form-control,
+// .custom-file-control,
+// .is-focused .form-control,
+// .is-focused .custom-file-control {
+//     // @extend .text-warning;
+//     background-image: linear-gradient(to top,
+//         $orange 2px,
+//         #adadad00 2px),
+//         linear-gradient(to top, rgba(0, 0, 0, 0.26) 1px, rgba(0, 0, 0, 0) 1px) !important;
+// }
+
+/**
+* Animations
+*/
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.animated {
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.dropdown-no-caret {
+    @extend .dropdown;
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+}
+
+.shop-manager-alert {
+    @extend .alert,
+    .alert-success,
+    .position-absolute,
+    .w-100,
+    .mt-3;
+}
+
+#form {
+
+    input,
+    select {
+        @extend .m-2,
+        .px-2;
+    }
+}
+
+textarea {
+    resize: none;
+}

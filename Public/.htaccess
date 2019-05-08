@@ -1,0 +1,21 @@
+Options -MultiViews
+RewriteEngine On
+Options -Indexes
+
+#RewriteBase /
+#Redirect 301 / http://www.e-learning.com/home/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+#RewriteRule ^/? http://www.e-learning.com/home/ [R = 301, L]
+
+RewriteRule ^ index.php [L]
+
+#RewriteRule ^(.+)? index.php?$1 [QSA,L]
+
+# One month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|woff2)$">
+  Header set Cache-Control "max-age=2628000, public"
+</filesMatch>

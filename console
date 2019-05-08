@@ -1,0 +1,7 @@
+<?php
+require __DIR__."../vendor/autoload.php";
+require "Core/helpers.php";
+use Core\Console\Handler as Console;
+
+$console = new Console($argv);
+$console->run();
